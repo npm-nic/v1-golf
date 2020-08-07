@@ -1,11 +1,4 @@
-import React from "react";
-import { nanoid } from "nanoid";
-
-import useAllGolfers from "../queries/useAllGolfers";
-import useFilteredGolfers from "../useFilteredGolfers";
-import Golfer4 from "./Golfer4";
-
-const allOurPlayers = new Set([
+export const allPlayersDrafted = new Set([
   "Brooks Koepka",
   "Bryson Dechambeau",
   "Justin Thomas",
@@ -108,49 +101,4 @@ const dunz = new Set([
   "Cameron Champ",
   "Lucas Glover",
 ]);
-const us = [mitch, nic, nick, bob, tim, fingers, jeremy, jordan, rj, dunz];
-
-export default function Golfers() {
-  const golfers = useAllGolfers();
-
-  const results = useFilteredGolfers(golfers, allOurPlayers);
-
-  return golfers.isLoading ? (
-    "loading"
-  ) : golfers.isError ? (
-    "error"
-  ) : results ? (
-    <>
-      <ul className='scoreboard'>
-        {results.map((user) => {
-          return (
-            <div key={nanoid()}>
-              <div className='main-details'>
-                <h5>
-                  {user.status} {user.name} {user.score}
-                </h5>
-                <p>total: {user.strokes}</p>
-                <p>
-                  today: {user.today || "__"} thru: {user.hole || "__"}
-                </p>
-              </div>
-              <div className='round-details-vert'>
-                <p>round 1: {user.rounds[0]}</p>
-                <p>round 2: {user.rounds[1]}</p>
-                <p>round 3: {user.rounds[2]}</p>
-                <p>round 4: {user.rounds[3]}</p>
-              </div>
-            </div>
-          );
-        })}
-      </ul>
-      <ul className='scoreboard split-entry'>
-        {us.map((team) => (
-          <Golfer4 team={team} key={nanoid()} />
-        ))}
-      </ul>
-    </>
-  ) : (
-    "idk where the player data went -- text nic"
-  );
-}
+export const whoDraftedWho = [mitch, nic, nick, bob, tim, fingers, jeremy, jordan, rj, dunz];
