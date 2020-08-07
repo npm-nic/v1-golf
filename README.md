@@ -17,5 +17,10 @@ node js + react (w/react-query) live PGA tour golf scoreboard
 
 - create an `index.js` file at the project's root.
 - install express: `npm i express nodemon helmet morgan nanoid`.
-- add the server script: `"server": "nodemon index.js"` inside package.json.
+- server script inside package.json: `"server": "nodemon index.js"`
 - to run the server use: `npm run server`.
+
+## deploy
+
+- dynamic PORT in index.js
+- start script in package.json: `"start": "node index.js"`

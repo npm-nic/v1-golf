@@ -4,7 +4,8 @@
   "description": "node js + react (w/react-query) live PGA tour golf scoreboard",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
