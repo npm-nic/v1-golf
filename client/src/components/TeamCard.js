@@ -1,11 +1,11 @@
 import React from "react";
 import useAllGolfers from "../queries/useAllGolfers";
-import useFilteredGolfers from "../useFilteredGolfers";
+import useFilterPlayers from "../helpers/useFilterPlayers";
 import { nanoid } from "nanoid";
 
-const Golfer4 = ({ team }) => {
+const TeamCard = ({ team }) => {
   const allGolfers = useAllGolfers();
-  const myGolfers = useFilteredGolfers(allGolfers, team);
+  const myGolfers = useFilterPlayers(allGolfers, team);
   return (
     <div className='my-scorecard'>
       {myGolfers.map((golfer) => {
@@ -23,10 +23,8 @@ const Golfer4 = ({ team }) => {
           </div>
         );
       })}
-
-      {/* <pre>{JSON.stringify(myGolfers, null, 2)}</pre> */}
     </div>
   );
 };
 
-export default Golfer4;
+export default TeamCard;

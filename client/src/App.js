@@ -2,17 +2,15 @@ import React from "react";
 import { ReactQueryDevtools } from "react-query-devtools";
 
 import "./App.css";
-import useAllGolfers from "./queries/useAllGolfers";
-import Golfers from "./components/Golfers";
+import EventBoard from "./components/EventBoard";
 
 function App() {
-  const golfers = useAllGolfers();
 
   return (
     <>
       <div className='App'>
         <h1>PGA Championship</h1>
-        <Golfers />
+        <EventBoard />
       </div>
       <ReactQueryDevtools />
     </>
