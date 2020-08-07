@@ -12,7 +12,7 @@ const Golfer4 = ({ team }) => {
         return (
           <div className='round-details-horizontal' key={nanoid()}>
             <h5>
-              {golfer.status} {golfer.name} {golfer.score}
+              {golfer.status} {golfer.name}
             </h5>
             <div className='round-scores'>
               <span>{golfer.rounds[0] || "__"}</span>
