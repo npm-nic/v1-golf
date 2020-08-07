@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <div className='App'>
-        <h1>PGA Championship {golfers.isFetching && "..."}</h1>
+        <h1>PGA Championship</h1>
         <Golfers />
       </div>
       <ReactQueryDevtools />
