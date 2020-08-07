@@ -46,7 +46,21 @@ ul {
   padding-left: 4%;
 }
 
-.round-details {
+.round-details-vert {
   padding-left: 6%;
   padding-bottom: 1%;
+}
+
+.my-scorecard {
+  border-top: 1px solid #333;
+}
+.round-details-horizontal {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6% 2%;
+}
+.round-scores {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
 }
