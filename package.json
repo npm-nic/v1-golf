@@ -1,0 +1,29 @@
+{
+  "name": "v1-golf",
+  "version": "1.0.0",
+  "description": "node js + react (w/react-query) live PGA tour golf scoreboard",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npm-nic/v1-golf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npm-nic/v1-golf/issues"
+  },
+  "homepage": "https://github.com/npm-nic/v1-golf#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^4.0.0",
+    "morgan": "^1.10.0",
+    "nanoid": "^3.1.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
