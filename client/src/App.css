@@ -3,9 +3,11 @@
   margin: 0;
   padding: 0;
 }
-body { 
+body {
   font-size: 62.5%;
   line-height: 1.4;
+  width: 95%;
+  margin: 2% auto;
   /* uncomment (below) if deleting fonts from index.css */
   /* font-family: Arial, Helvetica, sans-serif; */
 }
@@ -29,4 +31,22 @@ ul {
   box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
 
   background-color: white;
+}
+.App {
+  font-size: 1.2rem;
+  margin: 2% auto;
+}
+
+.scoreboard {
+  margin: 2% auto;
+  padding-left: 2%;
+}
+
+.main-details {
+  padding-left: 4%;
+}
+
+.round-details {
+  padding-left: 6%;
+  padding-bottom: 1%;
 }
