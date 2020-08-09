@@ -1,5 +1,5 @@
 const useFilterPlayers = (allPlayers, desiredPlayers) => {
-  return allPlayers.data?.reduce((acc, cur) => {
+  return allPlayers.reduce((acc, cur) => {
     if (desiredPlayers.has(cur.name)) {
       acc.push(cur);
     }

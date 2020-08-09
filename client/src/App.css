@@ -38,6 +38,7 @@ ul {
 }
 
 .league-scoreboard {
+  max-width: 500px;
   margin: 2% auto;
   padding-left: 2%;
 }
@@ -59,6 +60,7 @@ ul {
   display: flex;
   justify-content: space-between;
   padding: 0 4% 2%;
+  margin: 2% auto;
 }
 .round-scores {
   width: 40%;

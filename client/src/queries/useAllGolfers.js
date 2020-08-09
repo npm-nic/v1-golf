@@ -8,7 +8,7 @@ export default function useAllGolfers() {
     () =>
       axios
         .get("https://v1-golf.herokuapp.com/api/pga")
-        .then((res) => res.data.events[0].players),
+        .then((res) => res.data),
     {
       staleTime: 5 * 1000,
     }
