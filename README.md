@@ -2,25 +2,16 @@
 
 node js + react (w/react-query) live PGA tour golf scoreboard
 
-## Getting Started
+using live PGA data from https://pygolf.jacoduplessis.co.za/api
 
-## keep a list of dependencies
+## Current State:
 
-- generate a package.json file: `npm init -y`
+this is nothing special...just had a few hours to display PGA Championship golf scores + pool data for friends
 
-## ignore node_modules folder content
+## Future:
 
-- we don't want to push it up to GitHub
-- make a `.gitignore`: `npx gitignore node`
+- scrape own pga data
+- create live scoreboard for users (calculate scores based on rounds)
+- add overall scoreboard for entire tournament 
+- add draft lobby / sessions 
 
-## server
-
-- create an `index.js` file at the project's root.
-- install express: `npm i express nodemon helmet morgan nanoid`.
-- server script inside package.json: `"server": "nodemon index.js"`
-- to run the server use: `npm run server`.
-
-## deploy
-
-- dynamic PORT in index.js
-- start script in package.json: `"start": "node index.js"`
