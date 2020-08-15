@@ -22,6 +22,10 @@ ul {
   margin: 0;
 }
 
+ul > .event-name:hover {
+  cursor: pointer;
+}
+
 .container {
   margin: 4% 2%;
   padding: 4%;
