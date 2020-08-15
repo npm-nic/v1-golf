@@ -1,7 +1,7 @@
 import React from "react";
 import { nanoid } from "nanoid";
 import { whoDraftedWho } from "../helpers/draftData";
-import useAllGolfers from "../queries/useAllGolfers";
+import useAllGolfers from "../queries/useEventsQuery";
 import TeamCard from "./TeamCard";
 import Scoreboard from "./Scoreboard";
 
