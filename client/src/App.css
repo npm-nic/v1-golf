@@ -4,10 +4,9 @@
   padding: 0;
 }
 body {
+  width: 100%;
   font-size: 62.5%;
   line-height: 1.4;
-  width: 95%;
-  margin: 2% auto;
   /* uncomment (below) if deleting fonts from index.css */
   /* font-family: Arial, Helvetica, sans-serif; */
 }
@@ -22,10 +21,6 @@ ul {
   margin: 0;
 }
 
-ul > .event-name:hover {
-  cursor: pointer;
-}
-
 .container {
   margin: 4% 2%;
   padding: 4%;
@@ -36,15 +31,37 @@ ul > .event-name:hover {
 
   background-color: white;
 }
-.App {
-  font-size: 1.2rem;
-  margin: 2% auto;
+
+/* //// --> HEADER <-- //// */
+.header {
+  background-color: #89a194;
+  height: 15vh;
+  display: flex;
+}
+
+.header > h1 {
+  font-size: 2rem;
+  align-self: center;
+  padding-left: 2%;
+}
+
+ul > .event-name:hover {
+  cursor: pointer;
 }
 
 .league-scoreboard {
   max-width: 500px;
   margin: 2% auto;
   padding-left: 2%;
+}
+
+.scoreboard-close {
+  position: sticky;
+  top: 4px;
+  width: 5px;
+}
+.scoreboard-close:hover {
+  cursor: pointer;
 }
 
 .main-details {
