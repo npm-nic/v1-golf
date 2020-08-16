@@ -17,7 +17,7 @@ function EventsBoard() {
       <ul className='event-picker'>
         {eventsQuery?.data?.events?.map((event) => (
           <li
-            className='event-name container'
+            className='event-picker-name container'
             key={nanoid()}
             onClick={() => setEvent(event.name)}
           >

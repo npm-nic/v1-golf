@@ -30,10 +30,11 @@ export default function Scoreboard({ event, setEvent }) {
               <h5>
                 {golfer.status} {golfer.name} {golfer.score}
               </h5>
-              <p>total: {golfer.strokes}</p>
               <p>
                 today: {golfer.today || "__"} thru: {golfer.hole || "__"}
               </p>
+              <br />
+              <p>total: {golfer.strokes}</p>
             </div>
             <div className='round-details-vert'>
               <p>R1: {golfer.rounds[0]}</p>
