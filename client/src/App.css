@@ -1,17 +1,18 @@
+/* //// --> GLOBAL <-- //// */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
+  width: 100%;
   font-size: 62.5%;
   line-height: 1.4;
-  width: 95%;
-  margin: 2% auto;
-  /* uncomment (below) if deleting fonts from index.css */
-  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
+.App {
+  font-size: 1.2rem;
+}
 a {
   color: #333;
   text-decoration: none;
@@ -20,10 +21,6 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-ul > .event-name:hover {
-  cursor: pointer;
 }
 
 .container {
@@ -36,9 +33,24 @@ ul > .event-name:hover {
 
   background-color: white;
 }
-.App {
-  font-size: 1.2rem;
-  margin: 2% auto;
+
+/* //// --> HEADER <-- //// */
+.header {
+  background-color: #89a194;
+  height: 15vh;
+  display: flex;
+}
+
+.header > h1 {
+  font-size: 2rem;
+  align-self: center;
+  padding-left: 2%;
+}
+
+/* //// --> EVENTS BOARD <-- //// */
+
+ul > .event-picker-name:hover {
+  cursor: pointer;
 }
 
 .league-scoreboard {
@@ -47,11 +59,21 @@ ul > .event-name:hover {
   padding-left: 2%;
 }
 
+.scoreboard-close {
+  position: sticky;
+  top: 4px;
+  width: 5px;
+}
+.scoreboard-close:hover {
+  cursor: pointer;
+}
+
 .main-details {
   padding-left: 4%;
 }
 
 .round-details-vert {
+  min-width: 27px;
   padding-left: 6%;
   padding-bottom: 1%;
 }

@@ -5,18 +5,13 @@ import { nanoid } from "nanoid";
 import useEventsQuery from "../queries/useEventsQuery";
 import { useEventDetails } from "../helpers/useEventDetails";
 
-export default function Scoreboard({ event }) {
+export default function Scoreboard({ event, setEvent }) {
   console.log("Scoreboard -> event", event);
   const eventsQuery = useEventsQuery();
 
+  // [1]
   const eventDetails = useEventDetails(eventsQuery, event);
   console.log("Scoreboard -> eventDetails", eventDetails);
-
-  // const eventDetails = eventsQuery?.data?.events;
-  // most recent event will be at index[0]
-  // const eventPlayers = eventQuery?.data.events[0].players;
-  // const filteredResults = useFilterPlayers(eventPlayers, allPlayersDrafted);
-  // console.log("Scoreboard -> filteredResults", filteredResults);
 
   return eventsQuery.isLoading ? (
     "loading"
@@ -24,7 +19,10 @@ export default function Scoreboard({ event }) {
     "error"
   ) : (
     <ul className='league-scoreboard container'>
-      <h5>{eventDetails[0].name}</h5>
+      <div className='scoreboard-close' onClick={() => setEvent("")}>
+        <span>❌</span>
+      </div>
+      <p>{eventDetails[0].name}</p>
       {eventDetails[0].players.map((golfer) => {
         return (
           <div key={nanoid()} className='round-details-horizontal'>
@@ -32,10 +30,11 @@ export default function Scoreboard({ event }) {
               <h5>
                 {golfer.status} {golfer.name} {golfer.score}
               </h5>
-              <p>total: {golfer.strokes}</p>
               <p>
                 today: {golfer.today || "__"} thru: {golfer.hole || "__"}
               </p>
+              <br />
+              <p>total: {golfer.strokes}</p>
             </div>
             <div className='round-details-vert'>
               <p>R1: {golfer.rounds[0]}</p>
@@ -48,9 +47,4 @@ export default function Scoreboard({ event }) {
       })}
     </ul>
   );
-  // </>
-  //   ) :
-  //       (
-  //   `most recent golf data is ${eventQuery.data.events[0].name}`
-  // );
 }
