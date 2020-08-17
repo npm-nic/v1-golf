@@ -2,6 +2,8 @@
 
 node js + react (w/react-query) live PGA tour golf scoreboard
 
+deployed [here](v1-golf.vercel.app)
+
 using live PGA data from https://pygolf.jacoduplessis.co.za/api
 
 ## Current State:
