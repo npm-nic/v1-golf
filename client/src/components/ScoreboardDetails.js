@@ -1,7 +1,7 @@
 import React from "react";
+import { useTable } from "react-table";
 import useEventsQuery from "../queries/useEventsQuery";
 import { useEventDetails } from "../helpers/useEventDetails";
-import { useTable } from "react-table";
 
 const Table = ({ columns, data }) => {
   const {
