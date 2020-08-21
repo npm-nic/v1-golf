@@ -2,9 +2,9 @@ import React from "react";
 import { useQuery } from "react-query";
 import axios from "axios";
 
-export default function useAllGolfers() {
+export default function useEventsQuery() {
   return useQuery(
-    "golfers",
+    "events",
     () =>
       axios
         .get("https://v1-golf.herokuapp.com/api/pga")
