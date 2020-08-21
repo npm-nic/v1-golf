@@ -93,3 +93,8 @@ ul > .event-picker-name:hover {
   display: flex;
   justify-content: space-between;
 }
+
+table {
+  font-size: 1rem;
+  margin: 0 auto;
+}
