@@ -1,3 +1,4 @@
+
 export const leaguePlayersDrafter = new Set([
   "Viktor Hovland",
   "Kevin Kisner",
@@ -13,6 +14,7 @@ export const leaguePlayersDrafter = new Set([
   "Harris English",
 ]);
 
+
 export const oaksPlayersDrafted = new Set([
   "Jason Day",
   "Dustin Johnson",
@@ -26,7 +28,6 @@ export const oaksPlayersDrafted = new Set([
   "Rory Mcilroy",
   "Daniel Berger",
   "Collin Morikawa",
-  "Xander Schauffele",
 ]);
 
 export const allPlayersDrafted = new Set([

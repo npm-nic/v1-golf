@@ -1,6 +1,7 @@
 import React from "react";
 import useEventsQuery from "../queries/useEventsQuery";
 import Scoreboard from "../components/Scoreboard";
+
 import TheLeague from "../components/TheLeague";
 import EventPicker from "../components/EventPicker";
 
