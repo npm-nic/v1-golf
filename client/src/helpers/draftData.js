@@ -1,3 +1,20 @@
+
+export const leaguePlayersDrafter = new Set([
+  "Viktor Hovland",
+  "Kevin Kisner",
+  "Jon Rahm",
+  "Jason Day",
+  "Adam Scott",
+  "Xander Schauffele",
+  "Hideki Matsuyama",
+  "Matthew Fitzpatrick",
+  "Daniel Berger",
+  "Louis Oosthuizen",
+  "Tyrrell Hatton",
+  "Harris English",
+]);
+
+
 export const oaksPlayersDrafted = new Set([
   "Jason Day",
   "Dustin Johnson",

@@ -10,9 +10,9 @@ export default function EventPicker({ setEvent }) {
       <li
         className='event-picker-name container'
         key={nanoid()}
-        onClick={() => setEvent("oaks")}
+        onClick={() => setEvent("coldass")}
       >
-        Oak's Fantasy Tourney
+        The League | Fantasy Draft
       </li>
       {events.map((event) => (
         <li
