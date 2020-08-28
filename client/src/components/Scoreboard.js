@@ -5,12 +5,12 @@ import { nanoid } from "nanoid";
 import useEventsQuery from "../queries/useEventsQuery";
 import { useEventDetails } from "../helpers/useEventDetails";
 
-export default function Scoreboard({ event, setEvent }) {
-  console.log("Scoreboard -> event", event);
+export default function Scoreboard({ eventName, setEvent }) {
+  console.log("Scoreboard -> event", eventName);
   const eventsQuery = useEventsQuery();
 
   // [1]
-  const eventDetails = useEventDetails(eventsQuery, event);
+  const eventDetails = useEventDetails(eventsQuery, eventName);
   console.log("Scoreboard -> eventDetails", eventDetails);
 
   return eventsQuery.isLoading ? (
@@ -22,8 +22,8 @@ export default function Scoreboard({ event, setEvent }) {
       <div className='scoreboard-close' onClick={() => setEvent("")}>
         <span>❌</span>
       </div>
-      <p>{eventDetails[0].name}</p>
-      {eventDetails[0].players.map((golfer) => {
+      <p>{eventDetails.name}</p>
+      {eventDetails.players.map((golfer) => {
         return (
           <div key={nanoid()} className='round-details-horizontal'>
             <div className='main-details'>

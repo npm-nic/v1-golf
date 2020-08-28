@@ -1,7 +1,8 @@
 import React from "react";
 import useEventsQuery from "../queries/useEventsQuery";
-import { nanoid } from "nanoid";
 import Scoreboard from "../components/Scoreboard";
+import TheLeague from "../components/TheLeague";
+import EventPicker from "../components/EventPicker";
 
 function EventsBoard() {
   const [event, setEvent] = React.useState();
@@ -13,19 +14,14 @@ function EventsBoard() {
     "error"
   ) : (
     <div className='container'>
-      <h3>Pick an event to view the scoreboard: </h3>
-      <ul className='event-picker'>
-        {eventsQuery?.data?.events?.map((event) => (
-          <li
-            className='event-picker-name container'
-            key={nanoid()}
-            onClick={() => setEvent(event.name)}
-          >
-            {event.name} | {event.tour}
-          </li>
-        ))}
-      </ul>
-      {event && <Scoreboard event={event} setEvent={setEvent} />}
+      {event && event !== "coldass" && (
+        <Scoreboard eventName={event} setEvent={setEvent} />
+      )}
+      {event === "coldass" && (
+        <TheLeague eventName={event} setEvent={setEvent} />
+      )}
+      <h3>Pick an event and view the scoreboard: </h3>
+      {!event && <EventPicker setEvent={setEvent} />}
     </div>
   );
 }
